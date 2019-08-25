@@ -7,6 +7,7 @@ public class NewScript : MonoBehaviour
 
     private Animator anim;
     private Rigidbody2D rb;
+    private SpriteRenderer sprite;
 
     private Vector2 backForce;
     private float vertical;
@@ -14,6 +15,8 @@ public class NewScript : MonoBehaviour
 
     private bool areOpen = true;
 
+    public GameObject CurentScene;
+    public GameObject NextScene;
     public GameObject eyesOpen;
     public GameObject eyesClose;
 
@@ -22,6 +25,7 @@ public class NewScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -29,11 +33,23 @@ public class NewScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        vertical = Input.GetAxis("Horizontal");
-        horizontal = Input.GetAxis("Vertical");
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
 
-        rb.velocity = new Vector2( vertical * speed , horizontal * speed );
+        if (horizontal == -1f)
+        {
+            sprite.flipX = true;
+        }
+        else if(horizontal == 1f)
+        {
+            sprite.flipX = false;
+        }
+        
+
+        rb.velocity = new Vector2( horizontal * speed , vertical  * speed );
     }
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && areOpen == true)
@@ -47,6 +63,31 @@ public class NewScript : MonoBehaviour
             eyesOpen.SetActive(true);
             eyesClose.SetActive(false);
             areOpen = true;
+        }
+    }
+
+    
+    public void SetCurentGameObject(GameObject scene)
+    {
+        CurentScene = scene;
+    }
+
+    public void SetNextGameObject(GameObject scene)
+    {
+        NextScene = scene;
+    }
+
+    public void StartNextScene()
+    {
+        CurentScene.SetActive(false);
+        NextScene.SetActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.name == "")
+        {
+
         }
     }
 
