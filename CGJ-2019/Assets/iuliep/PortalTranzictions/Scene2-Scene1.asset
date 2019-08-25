@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40e1b442aa3f5dc4c9571d8ab5b10d16, type: 3}
-  m_Name: New Portal
+  m_Name: Scene2-Scene1
   m_EditorClassIdentifier: 
-  CurentScene: {fileID: 0}
-  NextScene: {fileID: 0}
+  CurentScene: Scene2
+  NextScene: Scene1

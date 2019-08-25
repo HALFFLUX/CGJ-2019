@@ -173,8 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 0}
-  CurentScene: {fileID: 749281656}
-  NextScene: {fileID: 1432037387}
   eyesOpen: {fileID: 1810181475}
   eyesClose: {fileID: 2035410603}
   speed: 110
@@ -410,11 +408,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749281657}
-  - component: {fileID: 749281659}
   - component: {fileID: 749281658}
+  - component: {fileID: 749281660}
   m_Layer: 0
   m_Name: Scene1
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,7 +458,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6230011, y: 1.8306818}
   m_EdgeRadius: 0
---- !u!114 &749281659
+--- !u!114 &749281660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,42 +467,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 749281656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: f1511b9b337523c43a1a697b227355a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  portal: {fileID: 11400000, guid: 034e7abc6f87b0445bbc2d67f696ff1b, type: 2}
+  CurentScene: {fileID: 0}
+  NextScene: {fileID: 0}
 --- !u!1 &991952943
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,9 +806,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1432037388}
   - component: {fileID: 1432037389}
+  - component: {fileID: 1432037390}
   m_Layer: 0
   m_Name: Scene2
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,6 +855,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.623024, y: 1.8722153}
   m_EdgeRadius: 0
+--- !u!114 &1432037390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432037387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1511b9b337523c43a1a697b227355a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal: {fileID: 11400000, guid: 54424ab67b616f149b669972a6c68ca6, type: 2}
+  CurentScene: {fileID: 0}
+  NextScene: {fileID: 0}
 --- !u!1 &1810181475
 GameObject:
   m_ObjectHideFlags: 0
