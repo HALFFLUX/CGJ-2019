@@ -17,7 +17,7 @@ public class UsePortalObj : MonoBehaviour
 
     void SaveNextAndCurentScene()
     {
-        CurentScene = portal.CurentScene;
-        NextScene = portal.NextScene;
+        CurentScene = GameObject.Find(portal.CurentScene);
+        NextScene = GameObject.Find(portal.NextScene);
     }
 }

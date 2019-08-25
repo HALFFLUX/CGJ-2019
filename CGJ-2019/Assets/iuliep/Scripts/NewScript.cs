@@ -16,8 +16,8 @@ public class NewScript : MonoBehaviour
     private bool areOpen = true;
 
     public GameObject PauseMenu;
-    public GameObject CurentScene;
-    public GameObject NextScene;
+    private GameObject CurentScene;
+    private GameObject NextScene;
     public GameObject eyesOpen;
     public GameObject eyesClose;
 
@@ -79,12 +79,14 @@ public class NewScript : MonoBehaviour
             eyesClose.SetActive(true);
             eyesOpen.SetActive(false);
             areOpen = false;
+            anim.SetBool("closedEyes", true);
         }
         else if(Input.GetKeyDown(KeyCode.Space) && areOpen == false)
         {
             eyesOpen.SetActive(true);
             eyesClose.SetActive(false);
             areOpen = true;
+            anim.SetBool("closedEyes", false);
         }
     }
 
